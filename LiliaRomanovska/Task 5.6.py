@@ -2,13 +2,13 @@
 All consecutive calls to this function should return cached result no matter the arguments."""
 
 def call_once(func):
-    cashed_res = 0
+    cached_res = 0
 
     def wrapper(a, b):
-        nonlocal cashed_res
-        if cashed_res == 0:
-            cashed_res = func(a, b)
-        return cashed_res
+        nonlocal cached_res
+        if cached_res == 0:
+            cached_res = func(a, b)
+        return cached_res
 
     return wrapper
 
