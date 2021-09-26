@@ -19,7 +19,7 @@ def descending_order_of_age(filepath):
      and writes CSV student information to the new file in descending order of age."""
 
     with open(filepath, "r") as students_info:
-        with open(filepath, "a", newline="") as students_age_sorted:
+        with open(filepath, "w", newline="") as students_age_sorted:
             reader = csv.reader(students_info)
             writer = csv.writer(students_age_sorted)
             writer.writerow(next(reader))
